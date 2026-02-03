@@ -1716,3 +1716,17 @@ Task(subagent_type="oracle", model="opus", prompt="Force Opus for this task")
 [1.9.0]: https://github.com/Yeachan-Heo/oh-my-claude-sisyphus/compare/v1.8.0...v1.9.0
 [1.8.0]: https://github.com/Yeachan-Heo/oh-my-claude-sisyphus/compare/v1.7.0...v1.8.0
 [1.7.0]: https://github.com/Yeachan-Heo/oh-my-claude-sisyphus/releases/tag/v1.7.0
+
+## [3.9.8] - 2026-02-03
+
+### Bug Fixes
+- fix: auto-recover status bar after plugin update (#327, #329)
+  - Filter plugin cache versions to only those with built dist/hud/index.js
+  - Prevents picking unbuilt new version after plugin update
+
+### Features
+- feat: add project isolation to state files (#326, #328)
+  - Added project_path validation to all persistent mode states
+  - Prevents cross-project state contamination
+  - Windows path normalization support
+  - Backward compatible with legacy states
